@@ -43,13 +43,13 @@ function newGrid() {
     for (let i = 0; i < user*user; i++) {
         let box = document.createElement('div');
         box.classList = 'box';
-        box.addEventListener('mouseover', function() {
-            box.style.backgroundColor = "rgb(222,0,88)";
+        box.addEventListener('mouseenter', function() {
+            let num = Math.floor(Math.random() * 6);
+            let colors = ["#D3D92B", "#F27244", "#FF3B77", "#C5D930", "#F0DD00"];
+            color = colors[num];
+            box.style.backgroundColor = `${color}`;
         });
         grid.appendChild(box);
     }
     
 }
-
-
-
